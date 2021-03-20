@@ -17,12 +17,13 @@ export const HeroeScreen = ({history}) => {
     first_appearance,
     characters,
   } = heroe;
-
+  
   const handleReturn = () => {
     if(history.length <= 2){
       history.push('/')
+    }else{
+      history.goBack();
     }
-    history.goBack();
   }
 
   return (
